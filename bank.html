@@ -5,38 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title Added -->
     <title>Bank Inside</title>
-    <!-- tailwind css added-->
+    <!-- Tailwind CSS CDN Added -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-gray-100">
+
+    <!----- Header Section Added ----->
     <header>
         <h1 class="text-5xl text-center mt-6">Let's get some
             <span class="font-semibold text-violet-600">Moooooooney</span>!!!
         </h1>
     </header>
+
     <main>
 
-        <!-- status ----- update -->
-
-        <!-- Deposit || Withdraw || Balance ----- section -->
-
+        <!---------- Account Summary Section Added ---------->
         <section class="mt-12">
 
+            <!----- Grid Layout for Deposit, Withdraw, Balance ----->
             <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
 
-                <!-- ---------------Deposit--------------- -->
+                <!----- Deposit Card ----->
                 <div class="bg-green-500 p-8 rounded-xl">
                     <h4 class="text-3xl">Deposit</h4>
                     <h2 class="text-5xl font-medium">$<span id="deposit-total">00</span></h2>
                 </div>
-                <!-- ---------------Withdraw--------------- -->
+
+                <!----- Withdraw Card ----->
                 <div class="bg-yellow-500 p-8 rounded-xl">
                     <h4 class="text-3xl">Withdraw</h4>
                     <h2 class="text-5xl font-medium">$<span id="withdraw-total">00</span></h2>
                 </div>
-                <!-- ---------------Balance--------------- -->
+
+                <!----- Balance Card ----->
                 <div class="bg-violet-500 p-8 rounded-xl">
                     <h4 class="text-3xl">Balance</h4>
                     <h2 class="text-5xl font-medium">$<span id="balance-total">1240</span></h2>
@@ -46,12 +50,13 @@
 
         </section>
 
-        <!-- deposit and Withdraw section-->
-
+        <!----- Transaction Input Section Deposit and Withdraw ----->
         <section class="mt-12">
 
+            <!----- Grid Layout for Deposit & Withdraw Inputs ----->
             <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
-                <!-- ---------------Deposit--------------- -->
+
+                <!---------- Deposit Input Panel ---------->
                 <div class="bg-fuchsia-400 p-8 rounded-xl">
                     <h4 class="text-3xl mb-4  text-white">Please Deposit</h4>
 
@@ -59,9 +64,10 @@
                         placeholder="$ amount you want to deposit">
 
                     <button id="btn-deposit"
-                        class="bg-violet-700 hover:bg-rose-700 px-8 py-2 text-white font-medium rounded mt-4">Deposit</button>
+                        class="bg-violet-700 hover:bg-rose-500 px-8 py-2 text-white font-medium rounded mt-4">Deposit</button>
                 </div>
-                <!-- ---------------Withdraw--------------- -->
+
+                <!---------- Withdraw Input Panel ---------->
                 <div class="bg-sky-400 p-8 rounded-xl">
                     <h4 class="text-3xl mb-4  text-white">Please Withdraw</h4>
 
@@ -69,7 +75,7 @@
                         placeholder="$ amount you want to withdraw">
 
                     <button id="btn-withdraw"
-                        class="bg-violet-700 hover:bg-rose-700 px-8 py-2 text-white font-medium rounded mt-4">Withdraw</button>
+                        class="bg-violet-700 hover:bg-rose-500 px-8 py-2 text-white font-medium rounded mt-4">Withdraw</button>
                 </div>
 
             </div>
@@ -78,10 +84,12 @@
 
     </main>
 
-    <!-- --------------------external js file-------------------- -->
-    <!-- --------------------external js file-------------------- -->
+    <!-- ===== External JavaScript Files Added ===== -->
 
+    <!-- Handles deposit calculations and UI updates -->
     <script src="js/deposit.js"></script>
+
+    <!-- Handles withdraw logic and balance validation -->
     <script src="js/withdraw.js"></script>
 
 </body>
